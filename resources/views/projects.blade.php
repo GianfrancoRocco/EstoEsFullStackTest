@@ -160,15 +160,6 @@
         });
     }
 
-    function action(idProject){
-        let action = $("#lstAction_"+idProject+" option:selected").val();
-        if(action == "edit"){
-            window.location.href = "/projects/"+idProject;
-        } else if (action == "delete"){
-            deleteProject(idProject);
-        }
-    }
-
     function deleteProject(idProject){
         $.ajax({
             type: "GET",
